@@ -1,0 +1,78 @@
+/* General Styling for Error Pages */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #fff; /* White background */
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full height */
+    text-align: center;
+    padding: 20px;
+}
+
+/* Error Code Styling */
+h1 {
+    font-size: 100px;
+    color: #3b82f6; /* Blue color */
+    font-weight: 700;
+    margin: 0;
+}
+
+h2 {
+    font-size: 32px;
+    color: #3b82f6; /* Blue color */
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+/* Error Message */
+p {
+    font-size: 18px;
+    color: #555; /* Dark gray text */
+    margin-top: 20px;
+    font-weight: 400;
+}
+
+/* Link Styling */
+a {
+    font-size: 16px;
+    color: #3b82f6; /* Blue color */
+    text-decoration: none;
+    margin-top: 30px;
+    padding: 10px 20px;
+    border: 2px solid #3b82f6;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+a:hover {
+    background-color: #3b82f6; /* Blue background on hover */
+    color: white; /* White text on hover */
+}
+
+/* Styling for Error Pages on Small Screens */
+@media screen and (max-width: 600px) {
+    h1 {
+        font-size: 80px;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    a {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+}

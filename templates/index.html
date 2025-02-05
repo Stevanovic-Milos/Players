@@ -1,0 +1,248 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="sr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="TemplateMo">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&display=swap" rel="stylesheet">
+  <link rel="icon" href="{% static 'favicon.ico' %}" type="image/x-icon">
+
+
+
+  <title>Početna</title>
+  <link rel="icon" type="image/x-icon" href="{% static 'favicon.ico' %}">
+
+
+  <!-- Link to external CSS file -->
+  <link rel="stylesheet" href="{% static 'css/index.css' %}">
+
+  <style>
+    /* Style for the player cards */
+    .player-card {
+      background-color: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.4s ease-in-out;
+      cursor: pointer;
+      text-align: center;
+      margin-bottom: 30px;
+      max-width: 350px;
+      margin-left: auto;
+      margin-right: auto; /* Center cards on larger screens */
+    }
+
+    .player-card:hover {
+      transform: translateY(-25px);
+    }
+
+    .player-thumb-image {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      border-radius: 10px 10px 0 0;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    .player-details {
+      width: 100%;
+      padding: 15px;
+      color: #000000;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .player-details .name {
+      font-weight: bold;
+      font-family: 'Roboto', sans-serif;
+      color: #000000;
+      font-size: 20px;
+      text-transform: capitalize;
+      margin: 10px 0;
+    }
+
+    .player-info-list {
+      list-style-type: none;
+      padding-left: 0;
+      text-align: left;
+      margin: 10px 0;
+    }
+
+    .player-info-list li {
+      font-size: 14px;
+      color: #000000;
+      margin: 5px 0;
+    }
+
+    .player-info-list li strong {
+      color: #333333;
+    }
+
+    .player-details p {
+      font-size: 13px;
+      color: #000000;
+      line-height: 1.6;
+      text-align: left;
+      margin-top: 10px;
+    }
+
+    /* Search input styles */
+    .search-container {
+      margin-top: 15px;
+      margin-bottom: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .search-container input {
+      width: 80%;
+      max-width: 500px;
+      padding: 10px;
+      border-radius: 25px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+      transition: all 0.3s ease;
+    }
+
+    .search-container input:focus {
+      border-color: #007bff;
+      outline: none;
+      box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    }
+
+    /* Responsive settings */
+    @media (max-width: 768px) {
+  /* Center the search input container */
+  .search-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px; /* Adjust as needed */
+  }
+
+  .search-container input {
+    width: 90%;
+  }
+
+  /* Center the player card */
+  .player-card {
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px; /* Adjust spacing between cards */
+  }
+
+  .row-cols-lg-3 {
+    row-gap: 15px;
+  }
+}
+@media (max-width: 768px) {
+  /* Center the search input container */
+  .search-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px; /* Adjust as needed */
+  }
+
+  .search-container input {
+    width: 90%;
+  }
+
+  /* Center the player card */
+  .player-card {
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px; /* Adjust spacing between cards */
+  }
+
+  .row-cols-lg-3 {
+    row-gap: 15px;
+  }
+}
+
+  </style>
+</head>
+
+{% include 'header.html' %}
+
+<body>
+
+  <!-- Search input -->
+  <div class="search-container">
+    <input type="text" id="search-input" class="form-control" placeholder="Pretraži igrače..." onkeyup="filterPlayers()">
+  </div>
+
+  <div class="carousel-container mt-5">
+    <div id="carouselExampleCaptions" class="carousel slide">
+      <!-- Carousel code here (unchanged) -->
+    </div>
+  </div>
+
+  <section class="players-section">
+    <div class="container">
+
+      <hr style="border-top: 1px solid rgba(0, 123, 255, 0.3); width: 100%; margin-top: 10px; margin-bottom: 25px;">
+      
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="all-players">
+            <div class="row row-cols-lg-3 row-cols-md-2 row-cols-1">
+              {% for post in posts %}
+              <div class="col mb-4">
+                <a href="{% url 'post' post.id %}" class="text-decoration-none">
+                  <div class="player-card">
+                    {% if post.image %}
+                    <img src="{{ post.image.url }}" alt="post_image" class="player-thumb-image">
+                {% else %}
+                    <p>Nema slike</p>
+                {% endif %}
+                    <div class="player-details">
+                      <p class="name">{{ post.ime }} {{ post.prezime }}</p>
+                      <ul class="player-info-list">
+                        <li><strong>Visina:</strong> {{ post.visina }}</li>
+                        <li><strong>Datum rođenja:</strong> {{ post.datum_rođenja }}</li>
+                        <li><strong>Pozicija:</strong> {{ post.pozicija }}</li>
+                      </ul>
+                      <p>{{ post.prednosti|slice:"0:500" }}....</p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {% include 'footer.html' %}
+
+  <script>
+    function filterPlayers() {
+      const searchInput = document.getElementById('search-input').value.toLowerCase();
+      const playerCards = document.querySelectorAll('.player-card');
+      
+      playerCards.forEach(card => {
+        const name = card.querySelector('.name').textContent.toLowerCase();
+        const position = card.querySelector('.player-info-list').textContent.toLowerCase();
+        const height = card.querySelector('.player-info-list').textContent.toLowerCase();
+        const birthYear = card.querySelector('.player-info-list').textContent.toLowerCase();
+
+        if (name.includes(searchInput) || position.includes(searchInput) || height.includes(searchInput) || birthYear.includes(searchInput)) {
+          card.style.display = '';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+  </script>
+
+</body>
+
+</html>

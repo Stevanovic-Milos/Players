@@ -1,0 +1,111 @@
+/* General Form Styling */
+form {
+    margin: 120px auto 80px auto; /* Add margin-top to push away from header and margin-bottom for footer */
+    width: 70%; /* Increased width for a wider form */
+    max-width: 1000px; /* Increased max width */
+    padding: 20px; /* Add padding for better spacing inside the form */
+    box-sizing: border-box; /* Ensure padding does not affect width */
+    background-color: #f8f9fa; /* Light background color */
+    border-radius: 8px; /* Rounded corners for the form */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+    position: relative; /* Keeps form in place */
+    z-index: 1; /* Keeps form above background elements */
+}
+
+/* Heading Style */
+h3 {
+    color: rgb(63, 63, 237); /* Blue color for the heading */
+    font-weight: 500;
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center; /* Center align the heading */
+}
+
+/* Submit Button Styling */
+.btn-create {
+    margin-top: 20px;
+    background: #3b82f6; /* Classic blue color for the button */
+    width: 100%; /* Full width for the button */
+    color: #fff; /* White text color */
+    font-size: 18px;
+    padding: 12px; /* Increase padding for a better button size */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Slightly rounded corners */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+    cursor: pointer; /* Change cursor to pointer */
+}
+
+/* Button Hover Styling */
+.btn-create:hover {
+    background: #fff; /* White background on hover */
+    color: #3b82f6; /* Text color changes to blue */
+    border: 2px solid #3b82f6; /* Blue border on hover */
+}
+
+/* Link Styling */
+a {
+    text-decoration: none;
+    color: #386cbb; /* Blue color for the links */
+}
+
+/* Mobile Responsiveness for Smaller Screens */
+@media screen and (max-width: 600px) {
+    form {
+        width: 90%; /* Form width will be 90% on smaller screens */
+        padding: 15px; /* Adjust padding for smaller screens */
+        margin-top: calc(100px + 1em); /* Adjust margin-top to account for header height */
+        margin-bottom: calc(40px + 1em); /* Adjust margin-bottom to account for footer height */
+    }
+
+    h3 {
+        font-size: 20px; /* Slightly smaller font size on mobile */
+        margin-bottom: 15px; /* Reduced margin for heading */
+    }
+
+    .btn-create {
+        font-size: 16px; /* Adjust button text size for smaller screens */
+        padding: 10px; /* Adjust button padding */
+    }
+
+    /* Adjusting form fields */
+    input, textarea, select {
+        width: 100%; /* Make form fields take full width on mobile */
+        font-size: 16px; /* Adjust font size of inputs for better readability */
+        padding: 10px; /* Adequate padding for better touch interactions */
+    }
+
+    /* Reduce form padding and margins */
+    .form-group {
+        margin-bottom: 10px; /* Reduced margin between form elements */
+    }
+}
+
+/* Tablet View (up to 768px) */
+@media screen and (max-width: 768px) {
+    form {
+        width: 80%; /* Form takes up 80% width on tablets */
+        margin-top: calc(110px + 1em); /* Adjust for header height */
+        margin-bottom: calc(60px + 1em); /* Adjust for footer height */
+    }
+
+    h3 {
+        font-size: 22px; /* Adjust heading font size for tablets */
+    }
+}
+
+/* Desktop View (for wider screens) */
+@media screen and (min-width: 1200px) {
+    form {
+        width: 60%; /* Narrower form on very large screens */
+        margin-top: calc(140px + 1em); /* Extra spacing from header */
+        margin-bottom: calc(100px + 1em); /* Extra spacing from footer */
+    }
+
+    h3 {
+        font-size: 26px; /* Increase heading size for large screens */
+    }
+
+    .btn-create {
+        font-size: 20px; /* Increase button size for large screens */
+    }
+}

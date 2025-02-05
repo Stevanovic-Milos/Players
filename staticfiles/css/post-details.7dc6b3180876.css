@@ -1,0 +1,197 @@
+/* General Styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f8f9fa;
+    padding-top: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Blog Content */
+.blog-content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Flex Settings for Columns */
+.col-md-6 {
+    flex: 1; /* Distribute space equally */
+    padding: 15px;
+    box-sizing: border-box; /* Ensure padding does not affect width */
+}
+
+/* Image Styling */
+.blog-thumb img {
+    width: 100%; /* Make image responsive */
+    height: auto;
+    height: 350px; /* Restrict height */
+    object-fit: cover; /* Maintain aspect ratio and fill area */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+/* Video Container Styling */
+.video-container iframe {
+    width: 100%; /* Make video responsive */
+    height: 350px; /* Set height of iframe */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+/* Stats Table Styling - New Version */
+table {
+    width: 100%;
+    margin-top: 30px;
+    border-collapse: collapse; /* Changed to collapse for continuous borders */
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+table th,
+table td {
+    padding: 16px;
+    text-align: left;
+    vertical-align: middle;
+    border-right: 2px solid #007bff; /* Continuous blue line between columns */
+}
+
+table th {
+    background-color: #007bff; /* Blue color */
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 16px 24px; /* Added more horizontal padding */
+}
+
+table td {
+    background-color: #f9f9f9;
+    font-size: 14px; /* Slightly smaller font for table content */
+    padding: 14px 24px; /* More padding for better readability */
+}
+
+table td:last-child, table th:last-child {
+    border-right: none; /* Remove right border from the last column */
+}
+
+table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+table tbody tr:nth-child(odd) td {
+    background-color: #e9f7fe; /* Light blue background for odd rows */
+}
+
+table tbody tr:nth-child(even) td {
+    background-color: #d0ebff; /* Lighter blue for even rows */
+}
+
+table tbody tr:first-child td {
+    border-top: 2px solid #007bff; /* Blue border on the first row */
+}
+
+/* Centering the Print Button Below the Table */
+.print-btn {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.print-btn button {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 28px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease;
+}
+
+.print-btn button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05); /* Slightly enlarge the button on hover */
+}
+
+/* Margin adjustments for buttons */
+.print-btn button,
+    .btn.btn-primary {
+        margin-bottom: 20px; /* Ensures button does not collide with footer */
+    }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .row {
+        flex-direction: column;
+    }
+
+    .col-md-6 {
+        width: 100%;
+        padding: 10px;
+    }
+
+    /* Adjust table styling for mobile devices */
+    table {
+        width: 100% !important; /* Ensure the table takes full width */
+        border-collapse: collapse !important; /* Collapse borders for consistency */
+    }
+
+    table th,
+    table td {
+        padding: 12px !important; /* Adjust padding for smaller screens */
+        font-size: 12px !important; /* Reduce font size for mobile */
+    }
+
+    table tbody tr:nth-child(odd) td {
+        background-color: #f4f9fd !important; /* Light blue for odd rows on mobile */
+    }
+
+    table tbody tr:nth-child(even) td {
+        background-color: #e6f2ff !important; /* Lighter blue for even rows on mobile */
+    }
+
+    /* Remove borders for the table for more mobile-friendly look */
+    table, table th, table td {
+        border: 1px solid #ddd !important; /* Lighter border */
+    }
+
+    table th {
+        background-color: #007bff !important;
+        color: white !important;
+    }
+
+    /* Hide video and footer during print */
+    .video-container {
+        display: none !important;
+    }
+
+    .print-btn button {
+        display: none !important; /* Hide print button */
+    }
+
+    footer {
+        display: none !important; /* Hide footer */
+    }
+}
+
+/* Extra responsive styles */
+@media (max-width: 480px) {
+    .container {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .print-btn button,
+    .btn.btn-primary {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+}

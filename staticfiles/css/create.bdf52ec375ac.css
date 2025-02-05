@@ -1,0 +1,49 @@
+form {
+    margin-top: 100px;
+    width: 70%; /* Increased width for a wider form */
+    max-width: 1000px; /* Increased max width */
+    margin-bottom: 50px;
+}
+
+@media screen and (max-width:600px) {
+    form {
+        width: 90%; /* For smaller screens, the form width will remain at 90% */
+    }
+}
+
+h3 {
+    color: rgb(63, 63, 237); /* Blue color for the heading */
+    font-weight: 500;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.btn-create {
+    margin-top: 20px;
+    background: #3b82f6; /* Classic blue color for the button */
+    width: 100%;
+    color: #fff; /* White text color */
+    font-size: 18px;
+    padding: 5px;
+    border: none; /* Remove border */
+    border-radius: 5px; /* Slightly rounded corners */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+.btn-create:hover {
+    background: #fff; /* White background on hover */
+    color: #3b82f6; /* Text color changes to blue */
+    border: 2px solid #3b82f6; /* Blue border on hover */
+    cursor: pointer; /* Change cursor to pointer to indicate clickable action */
+}
+
+a {
+    text-decoration: none;
+    color: #386cbb; /* Blue color for the links */
+}
+
+@media screen and (max-width:600px) {
+    form {
+        width: 90%;
+    }
+}

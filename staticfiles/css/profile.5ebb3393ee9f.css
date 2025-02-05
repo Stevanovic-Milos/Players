@@ -1,0 +1,343 @@
+/* Global Styles */
+body {
+    background-color: #f7f9fc;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    color: #333;
+}
+
+.user-name {
+    display: block;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 15px;
+    color: #000000;
+    text-transform: capitalize;
+    letter-spacing: 0.5px;
+    line-height: 1.4;
+    padding: 0;
+    margin-bottom: 15px;
+    background-color: transparent;
+    box-shadow: none;
+    transition: color 0.3s ease;
+}
+
+footer {
+    margin-top: auto;
+    background-color: #1a1a1a;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+/* User Card Full - Container for Cards */
+.user-card-full {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three equal columns */
+    gap: 20px; /* Space between cards */
+    margin: 20px auto;
+    width: 100%;
+    max-width: 1200px; /* Limit maximum width */
+}
+
+@media (max-width: 1024px) {
+    /* On tablets, adjust the number of columns */
+    .user-card-full {
+        grid-template-columns: repeat(2, 1fr); /* Two columns for medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    /* On tablets and smaller screens, stack the cards in one column */
+    .user-card-full {
+        grid-template-columns: repeat(1, 1fr); /* One column for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    /* For mobile screens, further tweak spacing and card sizes */
+    .user-card-full {
+        grid-template-columns: repeat(1, 1fr); /* One column */
+        gap: 10px;
+    }
+}
+
+/* Individual Card Styles */
+.card {
+    border-radius: 8px;
+    box-shadow: 0 1px 15px rgba(0, 0, 0, 0.1);
+    border: none;
+    background: white;
+    padding: 20px;
+    transition: transform 0.3s ease-in-out; /* Smooth hover effect */
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    justify-content: space-between;
+}
+
+.card:hover {
+    transform: translateY(-10px); /* Lift the card on hover */
+}
+
+/* User Profile within Card */
+.user-profile {
+    background: linear-gradient(to top, #007bff, #66aaff);
+    border-radius: 8px;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    transition: transform 0.3s ease-in-out; /* Animates card lift */
+    overflow: hidden; /* Ensures smooth animation */
+    flex-grow: 1; /* Allow profile to grow */
+}
+
+.user-profile:hover {
+    transform: translateY(-10px); /* Lift on hover */
+}
+
+.user-profile .img-radius {
+    border-radius: 50%;
+    border: 4px solid white;
+    margin-bottom: 15px;
+    width: 120px; /* Image size */
+    height: 120px; /* Image size */
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out; /* Image hover effect */
+}
+
+.user-profile .img-radius:hover {
+    transform: scale(1.1); /* Zoom in image on hover */
+}
+
+.user-profile h6 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    color: #fff;
+    margin-top: 10px;
+}
+
+/* Card Content */
+.card-block {
+    padding: 1.25rem;
+    flex-grow: 2; /* Allow content to take more space */
+}
+
+.card-block p {
+    font-size: 14px;
+    color: #666;
+}
+
+.card-block p span {
+    color: #007bff;
+}
+
+.m-b-25 {
+    margin-bottom: 25px;
+}
+
+/* Button Styles */
+.btn-edit {
+    border-radius: 5px;
+    border: none;
+    background-color: #007bff; /* Edit button color */
+    color: white;
+    padding: 8px 20px;
+    text-transform: uppercase;
+    font-size: 14px;
+    transition: background-color 0.3s;
+    margin-right: 10px;
+}
+
+.btn-edit:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+.btn-edit-profile {
+    background-color: transparent;
+    color: #cee6ff;
+    border: 2px solid #ffffff;
+    padding: 8px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 10px;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-edit-profile:hover {
+    background-color: #04325f;
+    color: #fff;
+    border: 2px solid #1E90FF;
+    transform: translateY(-2px);
+}
+
+.btn-edit-profile:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(30, 144, 255, 0.7);
+}
+
+.btn-edit-profile:active {
+    transform: translateY(1px);
+}
+
+.btn-obrisi {
+    border-radius: 5px;
+    border: none;
+    background-color: #dc3545; /* Delete button color */
+    color: white;
+    padding: 8px 20px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.btn-obrisi:hover {
+    background-color: #c82333; /* Darker red on hover */
+}
+
+/* Focus Effects for Buttons */
+.btn-edit:focus, .btn-obrisi:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.5); /* Blue focus effect */
+}
+
+/* Modal and Popup Styles */
+.modal-content {
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.modal-header {
+    background-color: #dc3545;
+    color: white;
+}
+
+.modal-footer .btn-danger {
+    background-color: #dc3545;
+    border: none;
+}
+
+.modal-footer .btn-danger:hover {
+    background-color: #c82333;
+}
+
+.confirmation-popup {
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+    z-index: 1000;
+}
+
+.confirmation-popup .popup-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+}
+
+.confirmation-popup button {
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.confirmation-popup .btn-confirm {
+    background-color: #f44336;
+    color: white;
+}
+
+.confirmation-popup .btn-cancel {
+    background-color: #808080;
+    color: white;
+}
+
+.confirmation-popup button:hover {
+    opacity: 0.9;
+}
+
+/* Social Links */
+.user-card-full .social-link li {
+    display: inline-block;
+}
+
+.user-card-full .social-link li a {
+    font-size: 20px;
+    margin: 0 10px 0 0;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Flexbox Styles */
+.d-flex.justify-content-between {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Post Image Styles */
+.post-image {
+    width: 100%;
+    height: 200px; /* Adjust based on design */
+    object-fit: cover; /* Prevents stretching */
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.post-image:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+@media (max-width: 768px) {
+    .card {
+        padding: 25px;
+        width: 90%;
+        margin: 10px auto;
+    }
+
+    .user-name {
+        font-size: 1.2rem;
+    }
+
+    .user-profile h6 {
+        font-size: 20px;
+    }
+
+    .btn-edit, .btn-obrisi, .btn-edit-profile {
+        font-size: 14px;
+        padding: 6px 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        padding: 20px;
+        width: 95%;
+        margin: 5px auto;
+    }
+
+    .user-profile h6 {
+        font-size: 18px;
+    }
+
+    .user-name {
+        font-size: 1rem;
+    }
+
+    .btn-edit, .btn-obrisi, .btn-edit-profile {
+        font-size: 12px;
+        padding: 5px 12px;
+    }
+}

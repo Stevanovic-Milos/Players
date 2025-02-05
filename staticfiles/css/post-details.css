@@ -1,0 +1,223 @@
+/* General Styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f8f9fa;
+    padding-top: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Blog Content */
+.blog-content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Flex Settings for Columns */
+.col-md-6 {
+    flex: 1; /* Distribute space equally */
+    padding: 15px;
+    box-sizing: border-box; /* Ensure padding does not affect width */
+}
+
+/* Image Styling */
+.blog-thumb img {
+    width: 100%; /* Make image responsive */
+    height: auto;
+    height: 350px; /* Restrict height */
+    object-fit: cover; /* Maintain aspect ratio and fill area */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+/* Video Container Styling */
+.video-container iframe {
+    width: 100%; /* Make video responsive */
+    height: 350px; /* Set height of iframe */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+/* Stats Table Styling - Blue Variant */
+table {
+    width: 90%; /* Adjust table width */
+    margin: 0 auto; /* Center the table */
+    margin-top: 30px;
+    border-collapse: collapse; /* Collapse borders for continuous lines */
+    background-color: #e3f4f9; /* Light blue background for table */
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+table th,
+table td {
+    padding: 18px;
+    text-align: left;
+    vertical-align: middle;
+}
+
+table th {
+    background-color: #73c8f6; /* Light blue header */
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 18px 24px; /* Adjusted padding for more spacing */
+}
+
+table td {
+    background-color: #f0f9ff; /* Light blue background for cells */
+    font-size: 15px; /* Slightly larger font for readability */
+    padding: 16px 24px; /* Increased padding for better spacing */
+}
+
+table tbody tr:hover {
+    background-color: #bde3f9; /* Lighter blue on hover for better interactivity */
+}
+
+table tbody tr:nth-child(odd) td {
+    background-color: #e9f7fc; /* Even lighter blue for odd rows */
+}
+
+table tbody tr:nth-child(even) td {
+    background-color: #d1f1fb; /* Slightly darker blue for even rows */
+}
+
+/* Centering the Print Button Below the Table */
+.print-btn {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.print-btn button {
+    background-color: #73c8f6;
+    color: white;
+    padding: 12px 28px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease;
+}
+
+.print-btn button:hover {
+    background-color: #6ab8e0;
+    transform: scale(1.05); /* Slightly enlarge the button on hover */
+}
+
+/* Margin adjustments for buttons */
+.print-btn button,
+    .btn.btn-primary {
+        margin-bottom: 20px; /* Ensures button does not collide with footer */
+    }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .row {
+        flex-direction: column;
+    }
+
+    .col-md-6 {
+        width: 80%;
+    }
+
+    /* Adjusting the print button position and margin */
+    .print-btn {
+        margin-top: 30px; /* Add space between the table and button */
+        margin-bottom: 20px; /* Ensure space between the button and footer */
+    }
+
+    .print-btn button,
+    .btn.btn-primary {
+        margin-bottom: 20px; /* Ensures button does not collide with footer */
+    }
+
+    footer {
+        margin-top: 20px; /* Optional: Add margin to the top of the footer for extra spacing */
+    }
+
+    /* Adjust the table width for responsiveness */
+    table {
+        width: 90% !important; /* Match the table width to the container width */
+        margin: 0 auto; /* Ensure the table remains centered */
+    }
+
+    /* Restrict table width to match image or video */
+    .container {
+        width: 90% !important; /* Container takes 90% of screen width */
+    }
+
+    table {
+        width: 90% !important; /* Match the table width to the container width */
+        margin: 0 auto; /* Ensure the table stays centered */
+    }
+}
+
+/* Hide Video when Printing */
+@media print {
+    /* Completely hide video container, print button, and footer */
+    .video-container {
+        display: none !important;
+    }
+
+    .print-btn button {
+        display: none !important; /* Hide the print button */
+    }
+
+    footer {
+        display: none !important; /* Hide footer */
+    }
+
+    /* Hide all buttons */
+    button {
+        display: none !important; /* Hide all buttons */
+    }
+
+    /* Make the table align closely with the image */
+    .row {
+        display: block !important; /* Change to block layout */
+    }
+
+    .col-md-6 {
+        width: 100% !important; /* Make the column take up 100% width */
+    }
+
+    /* Adjust the table position to bring it closer to the image */
+    table {
+        width: 100% !important; /* Ensure the table takes the full width */
+        border-collapse: collapse !important; /* Collapse borders for consistency */
+    }
+
+    /* Set bold borders for all rows, headers, and cells */
+    table, table th, table td {
+        border: 2px solid black !important; /* Bold black border for all rows */
+    }
+
+    /* Ensure all table text is black */
+    table td, table th {
+        color: black !important; /* Make sure the text is visible in the table */
+        font-weight: bold !important; /* Make the text bold */
+    }
+
+    /* Ensure visibility of alternating row colors */
+    table tbody tr:nth-child(odd) td {
+        background-color: #f4f9fd !important;
+    }
+
+    table tbody tr:nth-child(even) td {
+        background-color: #e6f2ff !important;
+    }
+
+    /* Ensure the container takes the full width */
+    .container {
+        width: 100% !important;
+    }
+}

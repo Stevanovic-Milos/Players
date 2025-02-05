@@ -1,0 +1,130 @@
+.form-container {
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    width: 100%;
+    max-width: 1400px; /* Increased max-width */
+    margin: auto;
+    box-sizing: border-box;
+}
+
+.form-title {
+    color: #3f3feb;
+    font-weight: 500;
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.form-control {
+    margin-bottom: 15px;
+}
+
+.player-image {
+    width: 100%;
+    height: auto;
+    max-width: 600px; /* Increased max-width for images */
+    max-height: 350px; /* Increased max-height for images */
+    object-fit: cover;
+    margin-bottom: 15px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+button[type="submit"] {
+    width: 100%;
+    background-color: #3f3feb;
+    color: #fff;
+    font-size: 18px;
+    padding: 12px; /* Increased padding */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: transparent;
+    color: #3f3feb;
+    border: 1px solid #3f3feb;
+}
+
+input[type="file"] {
+    padding: 10px;
+    width: 100%; /* Stretched input to take full width */
+    max-width: 300px; /* Increased max-width for file input */
+    display: block;
+    margin: 10px auto;
+}
+
+/* Mobile responsiveness */
+@media screen and (max-width: 768px) {
+    .container {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    .form-container {
+        padding: 20px;
+        width: 90%;
+    }
+
+    .form-title {
+        font-size: 20px;
+    }
+
+    .form-control {
+        margin-bottom: 12px;
+    }
+
+    .player-image {
+        max-width: 100%;
+        max-height: 250px; /* Slightly increased image max-height for better view */
+    }
+
+    button[type="submit"] {
+        font-size: 16px;
+        padding: 12px;
+    }
+
+    input[type="file"] {
+        width: 100%;
+        max-width: 300px; /* Ensure the file input is wider */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    .form-container {
+        padding: 15px;
+        width: 90%;
+    }
+
+    .form-title {
+        font-size: 18px;
+    }
+
+    .form-control {
+        margin-bottom: 10px;
+    }
+
+    .player-image {
+        max-width: 100%;
+        height: auto;
+        max-height: 200px; /* Adjust image height for smaller screens */
+    }
+
+    button[type="submit"] {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    input[type="file"] {
+        max-width: 100%;
+    }
+}

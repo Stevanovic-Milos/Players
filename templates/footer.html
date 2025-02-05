@@ -1,0 +1,21 @@
+{% load static %}  <!-- Load static files in Django -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Footer Example</title>
+  <link rel="stylesheet" href="{% static 'css/footer.css' %}"> <!-- Correct linking of the CSS file -->
+  <link rel="icon" href="{% static 'favicon.ico' %}" type="image/x-icon">
+
+</head>
+<body>
+  <div class="content">
+    <!-- Main content goes here -->
+  </div>
+  <footer>
+    <p>Made by <a href="https://stevanovicm.com/">Milos Stevanovic</a> &copy; 2024 | All Rights Reserved</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,123 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f7fc; /* Light gray background */
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Edit Profile Form Styling */
+form {
+    margin-top: 100px;
+    width: 60%;
+    max-width: 800px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Header Styling */
+h5 {
+    color: rgb(63, 126, 237); /* Standard blue */
+    font-weight: 600;
+    font-size: 32px;
+    margin-bottom: 20px;
+    text-align: center;
+    letter-spacing: 0.5px;
+}
+
+/* Form Label Styling */
+.form-label {
+    font-weight: 500;
+    color: #555;
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+
+/* Input and Input Group Styling */
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group-text {
+    background-color: #f0f0f0;
+    border-right: 0;
+}
+
+.form-control {
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    padding: 15px;
+    font-size: 16px;
+    transition: border-color 0.3s ease-in-out;
+}
+
+.form-control:focus {
+    border-color: rgb(63, 126, 237); /* Blue border on focus */
+    outline: none;
+}
+
+/* Button Styling */
+.btn-izmeni {
+    margin-top: 20px;
+    background-color: rgb(88, 136, 236); /* Blue */
+    width: 100%;
+    color: #fff;
+    font-size: 18px;
+    padding: 15px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.btn-izmeni:hover {
+    background-color: transparent;
+    color: rgb(63, 126, 237); /* Blue text */
+    border: 1px solid rgb(63, 126, 237); /* Blue border on hover */
+}
+
+/* Error Message Styling */
+p.text-danger {
+    color: #e74c3c;
+    font-size: 14px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Link Styling */
+a {
+    text-decoration: none;
+    color: #386cbb; /* Muted blue */
+    font-weight: 500;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: rgb(63, 126, 237); /* Blue color on hover */
+    letter-spacing: 1px;
+}
+
+/* Responsiveness */
+@media screen and (max-width: 768px) {
+    form {
+        width: 80%;
+        padding: 30px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    form {
+        width: 90%;
+        padding: 20px;
+    }
+}
