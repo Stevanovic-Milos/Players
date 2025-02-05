@@ -1,9 +1,7 @@
-/* General Styling */
 body {
     font-family: 'Roboto', sans-serif;
   }
   
-/* Form Wrapper */
 .form-wrapper {
     display: flex;
     justify-content: center;
@@ -12,7 +10,6 @@ body {
     margin-bottom: 50px;
   }
   
-/* Form Container */
 .edit-form {
     padding: 30px;
     max-width: 1000px;
@@ -22,7 +19,6 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
   
-/* Form Title */
 .form-title {
     color: rgb(63, 63, 237);
     font-weight: 500;
@@ -31,18 +27,15 @@ body {
     text-align: center;
   }
   
-/* Form Group Styling */
 .form-group {
     margin-bottom: 15px;
   }
   
-/* Player Image Styling */
 .player-image-container {
     text-align: center;
     margin-bottom: 15px;
   }
   
-/* Image Styling */
 .player-image {
     width: 100%;
     max-width: 600px;
@@ -51,7 +44,6 @@ body {
     border-radius: 5px;
   }
   
-/* File Input Styling */
 .file-input {
     width: 100%;
     padding: 10px;
@@ -60,7 +52,6 @@ body {
     margin: 10px auto;
   }
   
-/* Custom Date Picker */
 input[type="date"] {
     width: 100%;
     padding: 10px;
@@ -76,7 +67,6 @@ input[type="date"]:focus {
     border-color: #3b82f6;
 }
 
-/* Submit Button */
 .btn-create {
     background: #3b82f6;
     color: #fff;
@@ -95,7 +85,6 @@ input[type="date"]:focus {
     border: 2px solid #3b82f6;
 }
 
-/* Messages */
 .messages, .success-message {
     margin-top: 15px;
     text-align: center;
@@ -109,7 +98,6 @@ input[type="date"]:focus {
     color: green;
 }
 
-/* Mobile Responsiveness */
 @media screen and (max-width: 600px) {
     .edit-form {
         width: 90%;

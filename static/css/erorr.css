@@ -1,7 +1,6 @@
-/* General Styling for Error Pages */
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #fff; /* White background */
+    background-color: #fff;
     color: #333;
     margin: 0;
     padding: 0;
@@ -12,38 +11,35 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Full height */
+    height: 100vh;
     text-align: center;
     padding: 20px;
 }
 
-/* Error Code Styling */
 h1 {
     font-size: 100px;
-    color: #3b82f6; /* Blue color */
+    color: #3b82f6;
     font-weight: 700;
     margin: 0;
 }
 
 h2 {
     font-size: 32px;
-    color: #3b82f6; /* Blue color */
+    color: #3b82f6;
     font-weight: 500;
     margin-top: 10px;
 }
 
-/* Error Message */
 p {
     font-size: 18px;
-    color: #555; /* Dark gray text */
+    color: #555;
     margin-top: 20px;
     font-weight: 400;
 }
 
-/* Link Styling */
 a {
     font-size: 16px;
-    color: #3b82f6; /* Blue color */
+    color: #3b82f6;
     text-decoration: none;
     margin-top: 30px;
     padding: 10px 20px;
@@ -53,11 +49,10 @@ a {
 }
 
 a:hover {
-    background-color: #3b82f6; /* Blue background on hover */
-    color: white; /* White text on hover */
+    background-color: #3b82f6;
+    color: white;
 }
 
-/* Styling for Error Pages on Small Screens */
 @media screen and (max-width: 600px) {
     h1 {
         font-size: 80px;

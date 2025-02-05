@@ -15,10 +15,10 @@ MEDIA_DIR = BASE_DIR / "media"
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = env("DJANGO_SECRET_KEY")
 
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = env.bool("DEBUG", default=False)
+# Enable debugging for development environment
+DEBUG = True
 
-ALLOWED_HOSTS = env.list("ALLOWED_HOSTS", default=[])
+ALLOWED_HOSTS = env.list("ALLOWED_HOSTS", default=["localhost", "127.0.0.1"])
 
 # Application definition
 INSTALLED_APPS = [
@@ -28,8 +28,8 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    "myapp",  # Your application name
-    "storages",  # Required for AWS S3
+    "myapp",  
+    "storages",  
 ]
 
 MIDDLEWARE = [
@@ -40,7 +40,7 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
-    "whitenoise.middleware.WhiteNoiseMiddleware",  # For serving static files in production
+    "whitenoise.middleware.WhiteNoiseMiddleware",  
 ]
 
 ROOT_URLCONF = "myproject.urls"
@@ -63,15 +63,11 @@ TEMPLATES = [
 
 WSGI_APPLICATION = "myproject.wsgi.application"
 
-# Database configuration
+# Database configuration for SQLite (development environment)
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.postgresql",
-        "NAME": env("DB_NAME"),
-        "USER": env("DB_USER"),
-        "PASSWORD": env("DB_PASSWORD"),
-        "HOST": env("DB_HOST"),
-        "PORT": env("DB_PORT"),
+        "ENGINE": "django.db.backends.sqlite3",
+        "NAME": BASE_DIR / "db.sqlite3",  # SQLite database file
     }
 }
 
@@ -94,32 +90,17 @@ STATIC_URL = "/static/"
 STATIC_ROOT = BASE_DIR / "staticfiles"
 STATICFILES_DIRS = [STATIC_DIR]
 
-# Media settings - Ensure media files are served from S3
-MEDIA_URL = f'https://{env("AWS_STORAGE_BUCKET_NAME")}.s3.amazonaws.com/media/'
-MEDIA_ROOT = BASE_DIR / 'media'  # Local storage when not using S3, for development only
-
-# AWS S3 Configuration for media storage
-AWS_ACCESS_KEY_ID = env("AWS_ACCESS_KEY_ID")
-AWS_SECRET_ACCESS_KEY = env("AWS_SECRET_ACCESS_KEY")
-AWS_STORAGE_BUCKET_NAME = env("AWS_STORAGE_BUCKET_NAME")
-AWS_S3_REGION_NAME = env("AWS_S3_REGION_NAME")
-AWS_S3_SIGNATURE_VERSION = "s3v4"
-AWS_S3_FILE_OVERWRITE = True
-AWS_DEFAULT_ACL = False
-AWS_S3_VERIFY = True
-# Use S3 for media files storage
-DEFAULT_FILE_STORAGE = "storages.backends.s3boto3.S3Boto3Storage"
-
-DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+# Media settings - No need for AWS in development, using local storage
+MEDIA_URL = "/media/"
+MEDIA_ROOT = BASE_DIR / "media"
 
 # CSRF Trusted Origins
 CSRF_TRUSTED_ORIGINS = env.list("CSRF_TRUSTED_ORIGINS", default=[
-    "https://fudbalskisistem.onrender.com",
-    "http://fudbalskisistem.onrender.com",
-    "https://fudbalskisistem.up.railway.app",
+    "http://localhost",
+    "http://127.0.0.1",
 ])
 
-# Security settings (applied only in production)
+# Security settings - Disable secure cookies for development
 if not DEBUG:
     SESSION_COOKIE_SECURE = True
     CSRF_COOKIE_SECURE = True
