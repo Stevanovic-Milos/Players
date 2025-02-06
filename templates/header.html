@@ -1,9 +1,7 @@
-{% load static %}  <!-- Load the static files -->
+{% load static %}  
 
-<!-- Link to the custom header CSS -->
 <link rel="stylesheet" href="{% static 'css/header.css' %}">
 
-<!-- Bootstrap CSS (Ensure it's included) -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
 <link rel="icon" href="{% static 'favicon.ico' %}" type="image/x-icon">
 
@@ -47,7 +45,6 @@
   </nav>
 </header>
 
-<!-- Preloader with Blue Animation -->
 <div id="preloader" style="display: flex; justify-content: center; align-items: center; height: 100vh; background-color: #fff;">
   <div class="jumper">
     <div></div>
@@ -56,25 +53,21 @@
   </div>
 </div>
 
-<!-- Page Content -->
 <div class="main-banner header-text">
   <div class="container-fluid">
     <div class="owl-banner owl-carousel">
-      <!-- Add carousel items here -->
     </div>
   </div>
 </div>
 
-<!-- Bootstrap JS and Popper.js for the navbar toggle to work -->
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"></script>
 
-<!-- Optional Owl Carousel JS if you're using it for banners -->
-<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script> -->
+
 
 <script>
   window.addEventListener('load', function () {
     const preloader = document.getElementById('preloader');
-    preloader.style.display = 'none';  // Hide the preloader when the page is fully loaded
+    preloader.style.display = 'none';  
   });
 </script>

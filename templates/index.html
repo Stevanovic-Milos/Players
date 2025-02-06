@@ -16,11 +16,9 @@
   <link rel="icon" type="image/x-icon" href="{% static 'favicon.ico' %}">
 
 
-  <!-- Link to external CSS file -->
   <link rel="stylesheet" href="{% static 'css/index.css' %}">
 
   <style>
-    /* Style for the player cards */
     .player-card {
       background-color: #ffffff;
       border-radius: 10px;
@@ -117,23 +115,21 @@
 
     /* Responsive settings */
     @media (max-width: 768px) {
-  /* Center the search input container */
   .search-container {
     display: flex;
     justify-content: center;
-    margin-top: 15px; /* Adjust as needed */
+    margin-top: 15px; 
   }
 
   .search-container input {
     width: 90%;
   }
 
-  /* Center the player card */
   .player-card {
     max-width: 80%;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 20px; /* Adjust spacing between cards */
+    margin-bottom: 20px; 
   }
 
   .row-cols-lg-3 {
@@ -141,23 +137,21 @@
   }
 }
 @media (max-width: 768px) {
-  /* Center the search input container */
   .search-container {
     display: flex;
     justify-content: center;
-    margin-top: 15px; /* Adjust as needed */
+    margin-top: 15px; 
   }
 
   .search-container input {
     width: 90%;
   }
 
-  /* Center the player card */
   .player-card {
     max-width: 80%;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 20px; /* Adjust spacing between cards */
+    margin-bottom: 20px; 
   }
 
   .row-cols-lg-3 {
@@ -172,14 +166,12 @@
 
 <body>
 
-  <!-- Search input -->
   <div class="search-container">
     <input type="text" id="search-input" class="form-control" placeholder="Pretraži igrače..." onkeyup="filterPlayers()">
   </div>
 
   <div class="carousel-container mt-5">
     <div id="carouselExampleCaptions" class="carousel slide">
-      <!-- Carousel code here (unchanged) -->
     </div>
   </div>
 
