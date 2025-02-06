@@ -1,4 +1,3 @@
-/* Global Styles */
 * {
     margin: 0;
     padding: 0;
@@ -7,12 +6,11 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #f4f7fc; /* Light gray background */
+    background-color: #f4f7fc; 
     color: #333;
     line-height: 1.6;
 }
 
-/* Edit Profile Form Styling */
 form {
     margin-top: 100px;
     width: 60%;
@@ -24,9 +22,8 @@ form {
     transition: all 0.3s ease-in-out;
 }
 
-/* Header Styling */
 h5 {
-    color: rgb(63, 126, 237); /* Standard blue */
+    color: rgb(63, 126, 237); 
     font-weight: 600;
     font-size: 32px;
     margin-bottom: 20px;
@@ -34,7 +31,6 @@ h5 {
     letter-spacing: 0.5px;
 }
 
-/* Form Label Styling */
 .form-label {
     font-weight: 500;
     color: #555;
@@ -42,7 +38,6 @@ h5 {
     font-size: 16px;
 }
 
-/* Input and Input Group Styling */
 .input-group {
     margin-bottom: 20px;
 }
@@ -61,14 +56,13 @@ h5 {
 }
 
 .form-control:focus {
-    border-color: rgb(63, 126, 237); /* Blue border on focus */
+    border-color: rgb(63, 126, 237); 
     outline: none;
 }
 
-/* Button Styling */
 .btn-izmeni {
     margin-top: 20px;
-    background-color: rgb(88, 136, 236); /* Blue */
+    background-color: rgb(88, 136, 236); 
     width: 100%;
     color: #fff;
     font-size: 18px;
@@ -81,11 +75,10 @@ h5 {
 
 .btn-izmeni:hover {
     background-color: transparent;
-    color: rgb(63, 126, 237); /* Blue text */
-    border: 1px solid rgb(63, 126, 237); /* Blue border on hover */
+    color: rgb(63, 126, 237); 
+    border: 1px solid rgb(63, 126, 237); 
 }
 
-/* Error Message Styling */
 p.text-danger {
     color: #e74c3c;
     font-size: 14px;
@@ -93,17 +86,16 @@ p.text-danger {
     margin-top: 20px;
 }
 
-/* Link Styling */
 a {
     text-decoration: none;
-    color: #386cbb; /* Muted blue */
+    color: #386cbb; 
     font-weight: 500;
     font-size: 14px;
     transition: color 0.3s ease;
 }
 
 a:hover {
-    color: rgb(63, 126, 237); /* Blue color on hover */
+    color: rgb(63, 126, 237); 
     letter-spacing: 1px;
 }
 

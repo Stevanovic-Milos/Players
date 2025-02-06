@@ -1,17 +1,17 @@
 .navbar {
-  background-color: #f8f9fa; /* Light background for navbar */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for navbar */
+  background-color: #f8f9fa; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
 }
 
 .navbar-brand h2 {
-  color: #343a40; /* Dark color for brand text */
+  color: #343a40; 
   font-size: 28px;
   font-weight: bold;
   margin-left: 20px;
 }
 
 .navbar-brand h2 span {
-  color: #007bff; /* Blue color for the span */
+  color: #007bff; 
   font-weight: bold;
 
 }
@@ -25,50 +25,49 @@
 
 
 .navbar-nav .nav-link {
-  color: #343a40; /* Dark color for nav links */
+  color: #343a40; 
   font-size: 16px;
   margin-right: 15px;
   transition: color 0.3s ease, background-color 0.3s ease;
-  padding-left: 40px; /* Adds padding to shift text to the right */
-  padding-right: 10px; /* Adds padding to shift text to the right */
+  padding-left: 40px; 
+  padding-right: 10px; 
   margin-left: 20px;
 
 }
 
-/* Active link styles */
 .navbar-nav .nav-link.active {
-  color: #007bff; /* Blue color for active links */
-  background-color: rgba(0, 123, 255, 0.1); /* Light blue background when active */
+  color: #007bff; 
+  background-color: rgba(0, 123, 255, 0.1); 
 }
 
 .navbar-nav .nav-link:hover {
-  color: #007bff; /* Blue color on hover */
-  background-color: rgba(0, 123, 255, 0.1); /* Light blue background on hover for better visibility */
+  color: #007bff;
+  background-color: rgba(0, 123, 255, 0.1); 
 }
 
 .navbar-nav .nav-link.text-primary {
-  color: #007bff; /* Blue for primary links */
+  color: #007bff; 
 }
 
 .navbar-nav .nav-link.text-primary:hover {
-  color: #0056b3; /* Darker blue on hover */
+  color: #0056b3; 
 }
 
 .navbar-toggler {
   border: none;
-  margin-right: 10px; /* Add 10px margin to the right of the toggler */
-  margin-left: 10px; /* Add 10px margin to the left of the toggler */
+  margin-right: 10px; 
+  margin-left: 10px; 
 }
 
 .navbar-toggler-icon {
-  background: none; /* Remove background */
-  width: 30px; /* Adjust width of icon */
-  height: 30px; /* Adjust height of icon */
+  background: none; 
+  width: 30px; 
+  height: 30px; 
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding: 5px;
-  margin: 0; /* Remove margin */
+  margin: 0; 
 }
 
 .navbar-toggler-icon::before,
@@ -76,8 +75,8 @@
 .navbar-toggler-icon span {
   content: '';
   width: 100%;
-  height: 3px; /* Height of each line */
-  border-radius: 2px; /* Optional, for rounded corners */
+  height: 3px; 
+  border-radius: 2px; 
   transition: background-color 0.3s ease;
 }
 
@@ -93,7 +92,6 @@
   transform: translateY(0);
 }
 
-/* Preloader Styling */
 #preloader {
   position: fixed;
   top: 0;
@@ -116,7 +114,7 @@
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background-color: #007bff; /* Blue color for jumper animation */
+  background-color: #007bff; 
   animation: jump 1.5s infinite ease-in-out;
 }
 
@@ -129,25 +127,24 @@
   50% { transform: translateY(-15px); }
 }
 
-/* Ensure navbar items are centered */
+
 .navbar-nav {
-  text-align: left; /* Align the navbar links to the left */
-  margin-left: 0; /* Remove left margin */
+  text-align: left; 
+  margin-left: 0; 
 }
 
 .navbar-nav .nav-link {
-  padding: 10px 15px; /* Add padding for better touch targets */
+  padding: 10px 15px; 
 }
 
-/* Responsive Navbar */
 @media (max-width: 768px) {
   .navbar-nav {
-      margin-left: 10px; /* Add 10px margin to the left of the navbar items on smaller screens */
+      margin-left: 10px; 
   }
 
   .navbar-nav .nav-link {
-      font-size: 18px; /* Slightly larger font size on small screens */
+      font-size: 18px; 
       margin-right: 0;
-      padding: 10px 0; /* Increase padding for better touch targets */
+      padding: 10px 0; 
   }
 }

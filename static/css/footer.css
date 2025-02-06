@@ -1,4 +1,3 @@
-/* Reset body and HTML margin/padding */
 body, html {
     margin: 0;
     padding: 0;
@@ -7,49 +6,45 @@ body, html {
     min-height: 100vh;
 }
 
-/* Main content to push footer to the bottom */
 .content {
     flex: 1;
 }
 
 /* Footer styling */
 footer {
-    background-color: #f8f9fa; /* Light background to match the navbar */
-    color: #343a40; /* Dark text color, same as the navbar text color */
-    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for the footer */
+    background-color: #f8f9fa;
+    color: #343a40; 
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1); 
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    font-size: 0.875rem; /* Using rem for scalable font size */
-    padding: 1.25rem 0; /* Add more padding for better spacing */
-    margin-top: auto; /* Ensure footer stays at the bottom */
+    font-size: 0.875rem; 
+    padding: 1.25rem 0;
+    margin-top: auto; 
 }
 
-/* Footer links */
 footer a {
-    color: #007bff; /* Blue link color to match navbar */
+    color: #007bff;
     text-decoration: none;
-    font-weight: bold; /* Make links bold */
-    transition: color 0.3s ease; /* Smooth transition for hover effect */
+    font-weight: bold; 
+    transition: color 0.3s ease; 
 }
 
 footer a:hover {
-    color: #0056b3; /* Darker blue when hovered to match navbar hover effect */
+    color: #0056b3; 
 }
 
-/* Ensure consistency in mobile view */
 @media (max-width: 768px) {
     footer {
-        font-size: 0.75rem; /* Smaller font size for mobile devices */
-        padding: 1rem 0; /* Adjust padding for smaller screens */
+        font-size: 0.75rem; 
+        padding: 1rem 0; 
     }
 }
 
-/* Even smaller screens */
 @media (max-width: 480px) {
     footer {
-        font-size: 0.7rem; /* Further reduce font size for very small screens */
-        padding: 0.75rem 0; /* Further reduce padding */
+        font-size: 0.7rem; 
+        padding: 0.75rem 0; 
     }
 }
