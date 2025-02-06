@@ -1,3 +1,4 @@
+/* General body styling */
 body {
     background-color: #f7f9fc;
     font-family: 'Roboto', sans-serif;
@@ -9,6 +10,7 @@ body {
     overflow-x: hidden;
 }
 
+/* User Name Styling */
 .user-name {
     display: block;
     text-align: center;
@@ -25,6 +27,7 @@ body {
     transition: color 0.3s ease;
 }
 
+/* Card and Profile Container */
 .card {
     border-radius: 8px;
     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
@@ -38,9 +41,10 @@ body {
 }
 
 .card:hover {
-    transform: scale(1.05); 
+    transform: scale(1.05); /* Scale the whole card on hover */
 }
 
+/* User Profile Styling */
 .user-profile {
     background: linear-gradient(to top, #007bff, #66aaff);
     border-radius: 8px;
@@ -53,7 +57,7 @@ body {
 }
 
 .user-profile:hover {
-    transform: scale(1.05); 
+    transform: scale(1.05); /* Scale the whole profile on hover */
     background: linear-gradient(to top, #0056b3, #4c92f2);
 }
 
@@ -77,6 +81,7 @@ body {
     color: #fff;
 }
 
+/* Profile Details */
 .card-block {
     padding: 1.25rem;
 }
@@ -91,6 +96,7 @@ body {
     color: #007bff;
 }
 
+/* Button Styling */
 .btn-edit, .btn-obrisi, .btn-edit-profile {
     font-size: 14px;
     padding: 8px 20px;
@@ -100,6 +106,7 @@ body {
     transition: background-color 0.3s, transform 0.3s ease;
 }
 
+/* Edit Profile Button */
 .btn-edit-profile {
     background-color: #007bff;
     color: white;
@@ -122,6 +129,7 @@ body {
     box-shadow: 0 0 10px rgba(30, 144, 255, 0.7);
 }
 
+/* Delete Button */
 .btn-obrisi {
     background-color: #dc3545;
     color: white;
@@ -136,6 +144,7 @@ body {
     transform: translateY(-3px);
 }
 
+/* Modal Styling */
 .modal-content {
     border-radius: 10px;
     padding: 20px;
@@ -147,6 +156,7 @@ body {
     color: white;
 }
 
+/* Post Image Styling */
 .post-image {
     width: 100%;
     height: 300px;
@@ -159,6 +169,7 @@ body {
     transform: scale(1.05);
 }
 
+/* Social Links (Icons) */
 .user-card-full .social-link li {
     display: inline-block;
 }
@@ -169,6 +180,7 @@ body {
     transition: all 0.3s ease-in-out;
 }
 
+/* Media Queries */
 @media (max-width: 768px) {
     .card {
         padding: 25px;
