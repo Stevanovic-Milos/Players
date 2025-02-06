@@ -4,50 +4,50 @@ from django.utils import timezone
 
 class Post(models.Model):
     POSITION_CHOICES = [
-        ('Golman', 'Golman'),           # Goalkeeper
-        ('Zadnji vezni', 'Zadnji vezni'),       # Defender
-        ('Prednji vezni', 'Prednji vezni'), # Midfielder
-        ('Špic', 'Špic'),         # Forward
-        ('Levo krilo', 'Levo krilo'),     # Left Forward
-        ('Desno krilo', 'Desno krilo'),     # Right Forward
-        ('Levi bek', 'Levi bek'),       # Left Back
-        ('Desni bek', 'Desni bek'),     # Right Back
-        ('Štoper', 'Štoper'),          # Center Back
+        ('Golman', 'Golman'),          
+        ('Zadnji vezni', 'Zadnji vezni'),     
+        ('Prednji vezni', 'Prednji vezni'), 
+        ('Špic', 'Špic'),         
+        ('Levo krilo', 'Levo krilo'),     
+        ('Desno krilo', 'Desno krilo'),     
+        ('Levi bek', 'Levi bek'),      
+        ('Desni bek', 'Desni bek'),     
+        ('Štoper', 'Štoper'),        
     ]
 
     NOGA_CHOICES = [
-        ('Leva', 'Leva'),   # Left Foot
-        ('Desna', 'Desna'), # Right Foot
+        ('Leva', 'Leva'),   
+        ('Desna', 'Desna'), 
     ]
 
-    ime = models.CharField(max_length=200, blank=True, null=True)  # Allow null and blank values
+    ime = models.CharField(max_length=200, blank=True, null=True)  
     prezime = models.CharField(max_length=200)
     pozicija = models.CharField(
-        max_length=20,  # Change max_length to accommodate full position names
+        max_length=20,  
         choices=POSITION_CHOICES,
-        default='Prednji vezni',  # Default to Midfielder (Prednji vezni)
+        default='Prednji vezni',  
         blank=True, 
         null=True
     )
     nedostaci = models.TextField()
     prednosti = models.TextField()
-    visina = models.FloatField()  # Use FloatField for height (in cm, for example)
-    tezina = models.FloatField()  # Use FloatField for weight (in kg, for example)
+    visina = models.FloatField()  
+    tezina = models.FloatField()  
     noga = models.CharField(
         max_length=5, 
-        choices=NOGA_CHOICES,  # Add choices for Left or Right Foot
+        choices=NOGA_CHOICES,  
         blank=True, 
         null=True
     )
-    time = models.DateTimeField(default=timezone.now, blank=True)  # Corrected to use callable
-    image = models.ImageField(upload_to='images/posts/', blank=True, null=True)  # Define the image field here    
-    user = models.ForeignKey(User, on_delete=models.CASCADE)  # ForeignKey to User
+    time = models.DateTimeField(default=timezone.now, blank=True)  
+    image = models.ImageField(upload_to='images/posts/', blank=True, null=True)  
+    user = models.ForeignKey(User, on_delete=models.CASCADE) 
     
     # New video URL field
-    video_url = models.TextField(blank=True, null=True)  # Use TextField for the iframe embed code
+    video_url = models.TextField(blank=True, null=True)  
 
     # New date of birth field
-    datum_rođenja = models.DateField(blank=True, null=True)  # DateField for storing birth date
+    datum_rođenja = models.DateField(blank=True, null=True)  
     
     def __str__(self):
-        return f"{self.ime} {self.prezime} - {self.pozicija}"  # Display full position name
+        return f"{self.ime} {self.prezime} - {self.pozicija}"  

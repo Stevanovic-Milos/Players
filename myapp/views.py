@@ -16,7 +16,7 @@ def index(request):
         'posts': posts,
         'top_posts': Post.objects.all().order_by("-visina"),
         'user': request.user,
-        'media_url': settings.MEDIA_URL  # Ensure media_url is passed here
+        'media_url': settings.MEDIA_URL  
     })
 
 
@@ -126,7 +126,7 @@ def profile(request, id):
     return render(request, 'profile.html', {
         'profile_user': profile_user,
         'posts': Post.objects.filter(user_id=id),
-        'media_url': settings.MEDIA_URL  # Pass media_url for image URLs
+        'media_url': settings.MEDIA_URL 
     })
 
 
@@ -157,7 +157,7 @@ def post(request, id):
     return render(request, "post-details.html", {
         'post': post,
         'recent_posts': Post.objects.all().order_by("-id"),
-        'media_url': settings.MEDIA_URL  # Pass media_url for image URLs
+        'media_url': settings.MEDIA_URL  
     })
 
 
