@@ -43,7 +43,7 @@ Follow these steps to set up the project locally:
 
    ```bash
    python -m venv venv
-   source venv/bin/activate  # On Windows: venv\Scriptsctivate
+   source venv/bin/activate  # On Windows: venv\Scriptsactivate
    ```
 
 3. **Install Dependencies**:
@@ -94,13 +94,6 @@ Follow these steps to set up the project locally:
 1. **Create an AWS Account** 🌐: Sign up if you don't already have one.
 2. **Create an S3 Bucket** 🗃️: Set up an S3 bucket to store player images and videos.
 3. **Configure Settings in `settings.py`**:
-
-   ```python
-   AWS_ACCESS_KEY_ID = 'your-access-key-id'
-   AWS_SECRET_ACCESS_KEY = 'your-secret-access-key'
-   AWS_STORAGE_BUCKET_NAME = 'your-bucket-name'
-   ```
-
 4. **Install Required Packages**:
 
    ```bash
@@ -117,6 +110,15 @@ To deploy your application on OnRender, follow these steps:
 2. **Create a New Project** 💻: Link it to your GitHub repository.
 3. **Configure Environment Variables** 🔑: Set up the necessary environment variables like AWS credentials and database URL in the OnRender dashboard.
 4. **Automatic Deployment** 🔄: OnRender will automatically detect your Django application and deploy it to production.
+5. **Setup Envirnoment variables** 📥
+
+
+   ```python
+   AWS_ACCESS_KEY_ID = 'your-access-key-id'
+   AWS_SECRET_ACCESS_KEY = 'your-secret-access-key'
+   AWS_STORAGE_BUCKET_NAME = 'your-bucket-name'
+   ```
+
 
 ---
 
