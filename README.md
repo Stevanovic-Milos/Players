@@ -1,5 +1,5 @@
 
-# 🏀 Django Sports Stats Application 🏆
+# Django Sports Stats Application 🏆
 
 Welcome to the **Django Sports Stats Application**! 🎉 This web application allows coaches to register, add players, track their statistics, and manage images and videos for each player. Coaches can also view, edit, and print player information with ease. 🌟
 
